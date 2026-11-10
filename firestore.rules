@@ -3,7 +3,7 @@ service cloud.firestore {
   match /databases/{database}/documents {
     match /guestbook/{postId} {
       function admin() {
-        return request.auth != null && request.auth.uid == "REPLACE_WITH_ADMIN_UID";
+        return request.auth != null && request.auth.uid == "RsnHgfL0ICdZ6BWh0ogoyuLbXnQ2";
       }
       allow read: if true;
       allow create: if request.resource.data.keys().hasOnly(['name','message','reply','createdAt','repliedAt'])
